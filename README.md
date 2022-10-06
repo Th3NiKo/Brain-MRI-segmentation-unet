@@ -49,11 +49,16 @@ Download dataset from Kaggle
 https://www.kaggle.com/datasets/mateuszbuda/lgg-mri-segmentation
 
 Default data structure looks like this:
+
 data
+
 -> kaggle_3m
-    --->patient_1
-    --->patient_2
-    --->...
+
+--->patient_1
+
+--->patient_2
+
+--->...
 
 ## Usage
 
@@ -80,6 +85,7 @@ python src/predict.py
 ### Binary IoU metric for unet
 
 Train set: 0.9047
+
 Test set: 0.8806
 
 ### One patient data (0.5 > threshold)
