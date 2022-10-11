@@ -42,6 +42,7 @@ Libraries used for training:
     - scikit-learn
     - numpy
     - matplotlib
+
 Libraries used for api:
     - fastapi
     - uvicorn
