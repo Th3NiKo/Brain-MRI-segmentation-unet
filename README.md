@@ -22,7 +22,7 @@ Simple api included.
     * predict.py - make prediction on data and save images in output folder
     * unet_model_recipe.py - whole unet model architecture
     * unet_training.py - model training pipeline
-    * api (fastapi, one prediction enpoint)
+    * api (fastapi, one prediction endpoint)
         * api.py - simple API for making predictions on brain images, outputs segmentation mask (without thresholding)
         * api_test.py - test of API, making call with image from dataset
 2. notebooks (notebooks and analysis)
