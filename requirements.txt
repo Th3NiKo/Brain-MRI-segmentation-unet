@@ -1,4 +1,9 @@
+# Training
 tensorflow==2.10.0
 Pillow==9.2.0
 scikit-learn==1.1.2
 matplotlib==3.6.0
+# Api
+fastapi==0.85.0
+uvicorn[standard]
+python-multipart==0.0.5
