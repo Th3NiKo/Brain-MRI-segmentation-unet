@@ -14,17 +14,18 @@ from keras.models import load_model
 from keras.utils import img_to_array
 
 SCRIPT_PATH = os.path.dirname(__file__)
-MODEL_PATH = os.path.join(SCRIPT_PATH ,"..", "..", "models", "unet_brain_segmentation.h5")
+MODEL_PATH = os.path.join(SCRIPT_PATH, "..", "..", "models", "unet_brain_segmentation.h5")
 
 app = FastAPI(title='Brain MRI Segmentation image prediction')
 
 model = load_model(MODEL_PATH)
 
+
 @app.post(
     "/predict/image",
-    responses = {
+    responses={
         200: {
-            "content": { "image/png": {} }
+            "content": {"image/png": {}}
         }
     },
     response_class=Response

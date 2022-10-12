@@ -15,6 +15,7 @@ from sklearn.model_selection import train_test_split
 SCRIPT_PATH = os.path.dirname(__file__)
 DATASET_PATH = os.path.join(SCRIPT_PATH, "..", "data", "kaggle_3m")
 
+
 class DataLoader:
     """
     Load Brain Mri Segmentation data, preprocess and return target input pairs.
@@ -48,8 +49,7 @@ class DataLoader:
             self,
             normalize: bool = True,
             img_size: Tuple[int, int] = (255, 255),
-            specific_patient: str = None
-        ) -> Tuple[np.ndarray, np.ndarray]:
+            specific_patient: str = None) -> Tuple[np.ndarray, np.ndarray]:
         """
         Load data and return as numpy arrays for training (input and target).
 
@@ -83,10 +83,10 @@ class DataLoader:
         )
 
         for index, (image_path, mask_path) in enumerate(zip(images_files, masks_files)):
-            image = load_img(image_path, color_mode="rgb", target_size = img_size)
+            image = load_img(image_path, color_mode="rgb", target_size=img_size)
             image = img_to_array(image)
 
-            mask = load_img(mask_path, color_mode="grayscale", target_size = img_size)
+            mask = load_img(mask_path, color_mode="grayscale", target_size=img_size)
             mask = img_to_array(mask)
 
             if normalize:
@@ -101,8 +101,7 @@ class DataLoader:
 
 def split_data_train_test(
         inputs: np.ndarray, targets: np.ndarray,
-        random_state=2022, test_size=0.2
-    ):
+        random_state=2022, test_size=0.2):
     """
     Function for spliting data into train and test set (based on sklearn train_test_split).
     Default input shape (number_of_images, img_height, img_width, 3).
