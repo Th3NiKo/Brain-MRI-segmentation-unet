@@ -59,4 +59,4 @@ async def predict_api(file: UploadFile = File(...)):
     return Response(content=im_bytes, media_type="image/png")
 
 if __name__ == "__main__":
-    uvicorn.run(app, debug=True)
+    uvicorn.run(app, host="0.0.0.0", port=8000, debug=True)

@@ -69,6 +69,8 @@ data
 
 ## Usage
 
+### Scripts
+
 Model **training**:
 
 ```bash
@@ -97,6 +99,22 @@ Test API endpoint (make prediction):
 
 ```bash
 python src/api/api_test.py
+```
+
+### Dockerfile
+
+Simple dockerfile for api server running.
+
+Build
+
+```bash
+docker build -t brain_segmentation .
+```
+
+Run (in background)
+
+```bash
+docker run -d -it --name brain_segmentation-run -p 8000:8000 brain_segmentation
 ```
 
 ## Example output
