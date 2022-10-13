@@ -56,7 +56,7 @@ class DataLoader:
         Args:
             normalize: if True function will normalize image into 0-1 range.
             img_size: Tuple representing shape of image. Img_height as first, img_width as second.
-            specific_patient: string representing patient identifier ex: TCGA_DU_A5TS_19970726. 
+            specific_patient: string representing patient identifier ex: TCGA_DU_A5TS_19970726.
                 Allow to load data only for specific patient.
         Returns:
             Tuple containing numpy arrays of shapes:
