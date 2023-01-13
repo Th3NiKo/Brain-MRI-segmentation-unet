@@ -68,7 +68,7 @@ def decoder_block(inputs, skip_layer_input, filters: int = 32):
     return double_conv(merge)
 
 
-def unet_model(input_size: Tuple[int, int] = (224, 224, 3), starting_filters=32):
+def unet_model(input_size: Tuple[int, int, int] = (224, 224, 3), starting_filters=32):
     """
     Whole unet model architecture.
     """
